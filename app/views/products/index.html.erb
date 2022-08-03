@@ -1,8 +1,10 @@
 <h1>Products</h1>
 
 <% @products.each do |product| %>
-<h2><%= product.name%></h2>
-<p>
-  <%= link_to 'Details', product %>
-</p>
+
+<h2><%= product.name %></h2>
+<p><%= analyze_price(product) %></p>
+<p>Added: <%= time_ago_in_words(product.created_at) %> ago</p>
+
+<p><%= link_to 'Details', product %></p>
 <% end %>
