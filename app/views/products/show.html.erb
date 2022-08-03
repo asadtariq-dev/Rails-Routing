@@ -3,7 +3,7 @@
 <p><%= @product.description%></p>
 <p>
   <strong>Price: </strong>
-  <%= number_to_human(@product.price) %>
+  <%= number_to_currency(number_to_human(@product.price), unit:'RS ') %>
 </p>
 <p>
   <%= link_to 'Back', products_path %>
