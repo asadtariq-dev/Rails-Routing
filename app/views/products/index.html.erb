@@ -1,6 +1,4 @@
-<h1>Products</h1>
-<br />
-<br />
+<div class="pt-5">
 <% @products.each do |product| %>
 
 <h2><%= product.name %></h2>
@@ -10,3 +8,4 @@
 <p><%= link_to 'Details', product %></p>
 <hr size="3" />
 <% end %>
+</div>

@@ -1,4 +1,4 @@
-$main-color: #1E7B12;
+$main-color: #73f263;
 
 @mixin rounded-corners($radius) {
   border-radius: $radius;
@@ -6,33 +6,23 @@ $main-color: #1E7B12;
   -webkit-border-radius: $radius;
 }
 
+html,
 body {
+  height: 100%;
+  background-color: #0d1117;
   margin: 0;
   padding: 0;
-  background-color: #FFF;
-  font-family: verdana;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
-}
-
-#header {
-  background-color: $main-color;
-  color: #FFF;
-  padding: 4px 100px;
-  border-bottom: solid 5px darken($main-color, 10%);
-
-  h1 {
-    font-size: 30px;
-  }
+  color: rgba(255, 255, 255, 0.874);
 }
 
 a {
   color: $main-color;
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
+    color: chartreuse;
   }
-}
-
-#container {
-  margin: 0 100px;
 }
