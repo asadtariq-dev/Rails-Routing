@@ -1,3 +1,8 @@
+$primary-color: mediumaquamarine;
+$primary-hover: aquamarine;
+$secondary-color: salmon;
+
+
 .cover-container {
   max-width: 42em;
 }
@@ -19,7 +24,7 @@
   font-weight: 700;
   color: rgba(255, 255, 255, 0.897);
   background-color: transparent;
-  border-bottom: .25rem solid salmon;
+  border-bottom: .25rem solid $secondary-color;
 }
 
 .nav-head .nav-link:hover,
@@ -34,7 +39,7 @@
 
 .nav-head .active {
   color: #fff;
-  border-bottom-color:mediumaquamarine
+  border-bottom-color:$primary-color
 }
 
 @media (min-width: 48em) {

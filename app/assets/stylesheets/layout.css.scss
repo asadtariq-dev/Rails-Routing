@@ -1,4 +1,7 @@
-$main-color: mediumaquamarine;
+$primary-color: mediumaquamarine;
+$primary-hover: aquamarine;
+$secondary-color: salmon;
+
 
 html,
 body {
@@ -14,12 +17,17 @@ body {
   max-width: 55rem;
 }
 
+.product-item:hover {
+  border-color: $secondary-color !important;
+  background-color: rgba(62, 68, 68, 0.036);
+}
+
 a {
-  color: $main-color;
+  color: $primary-color;
   text-decoration: none;
 
   &:hover {
     text-decoration: none;
-    color: aquamarine;
+    color: $primary-hover;
   }
 }
