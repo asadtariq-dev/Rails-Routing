@@ -1,11 +1,12 @@
 <div class="pt-5">
 <% @products.each do |product| %>
-
+<div class="border rounded p-3">
 <h2><strong><%= product.name%></strong> </h2>
 <p><%= analyze_price(product) %></p>
 <p>Added: <%= time_ago_in_words(product.created_at) %> ago</p>
 
 <p><%= link_to 'Details', product %></p>
-<hr size="3" />
+</div>
+<br/>
 <% end %>
 </div>
