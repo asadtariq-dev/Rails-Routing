@@ -5,42 +5,44 @@
 /*
  * Header
  */
-.masthead {
+.head {
   margin-bottom: 2rem
 }
 
-.masthead-brand {
+.head-name {
   margin-bottom: 0;
+  font-weight: bold;
 }
 
-.nav-masthead .nav-link {
+.nav-head .nav-link {
   padding: .25rem 0;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.897);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
+  border-bottom: .25rem solid salmon
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+.nav-head .nav-link:hover,
+.nav-head .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.778);
+  text-decoration: none;
 }
 
-.nav-masthead .nav-link+.nav-link {
+.nav-head .nav-link+.nav-link {
   margin-left: 1rem;
 }
 
-.nav-masthead .active {
+.nav-head .active {
   color: #fff;
-  border-bottom-color: #fff;
+  border-bottom-color:mediumaquamarine
 }
 
 @media (min-width: 48em) {
-  .masthead-brand {
+  .head-name {
     float: left;
   }
 
-  .nav-masthead {
+  .nav-head {
     float: right;
   }
 }

@@ -1,4 +1,4 @@
-$main-color: #73f263;
+$main-color: mediumaquamarine;
 
 @mixin rounded-corners($radius) {
   border-radius: $radius;
@@ -23,6 +23,6 @@ a {
 
   &:hover {
     text-decoration: underline;
-    color: chartreuse;
+    color: aquamarine;
   }
 }
