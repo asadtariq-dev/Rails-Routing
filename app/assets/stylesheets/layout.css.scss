@@ -1,11 +1,5 @@
 $main-color: mediumaquamarine;
 
-@mixin rounded-corners($radius) {
-  border-radius: $radius;
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-}
-
 html,
 body {
   height: 100%;
@@ -15,6 +9,9 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.874);
+}
+.store-container {
+  max-width: 55rem;
 }
 
 a {
