@@ -24,6 +24,19 @@ class ProductsController < ApplicationController
     end
   end
 
+  # Action for deleting product
+  def destroy
+    puts "=\n=\n=\n=\n="
+    puts @product
+    puts "=\n=\n=\n=\n="
+    @product = Product.find(params[:id])
+    if @product.destroy
+      redirect_to root_path, status: :see_other, alert: "Item was successfully deleted."
+    else
+      redirect_to @products, alert: "Something went wrong"
+    end
+  end
+
   private
 
   # Filters params using Strong Parameters

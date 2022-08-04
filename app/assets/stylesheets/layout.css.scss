@@ -1,6 +1,7 @@
 $primary-color: mediumaquamarine;
 $primary-hover: aquamarine;
 $secondary-color: salmon;
+$secondary-hover: rgb(255, 104, 87);
 $bg-color: #0d1117;
 
 
@@ -16,6 +17,14 @@ body {
 }
 .store-container {
   max-width: 55rem;
+}
+
+.delete-button {
+  color: $secondary-color !important;
+
+  &:hover {
+    color: $secondary-hover !important;
+  }
 }
 
 .product-item:hover {

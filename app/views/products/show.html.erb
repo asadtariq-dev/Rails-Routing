@@ -6,6 +6,8 @@
   <%= number_to_currency(number_to_human(@product.price), unit:'RS ') %>
 </p>
 <p>
+<%= link_to "Delete", product_path(@product), class: "delete-button", data: { turbo_method: :delete,
+    turbo_confirm: "Are you sure?" } %>
   <%= link_to 'Back', products_path %>
 </p>
 </div>
