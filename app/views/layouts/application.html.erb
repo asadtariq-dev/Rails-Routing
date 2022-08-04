@@ -11,9 +11,9 @@
   </head>
 
   <body class="store-container text-center d-flex w-100 h-100 p-3 mx-auto flex-column ">
-
-<%= render partial: '/shared/navbar' %>
+    <%= render partial: '/shared/store_alerts' %>
+    <%= render partial: '/shared/navbar' %>
     <%= yield %>
-<%= render partial: '/shared/footer' %>
+    <%= render partial: '/shared/footer' %>
   </body>
 </html>
