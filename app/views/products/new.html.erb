@@ -1,1 +1,28 @@
 <h2>Add New Product Here</h2>
+<br/>
+
+<div class="d-flex justify-content-center">
+<%= form_with model: @product do |form| %>
+<div class="row mb-2">
+  <%= form.text_field :name, placeholder: "Name", size:'40', class: "inner-body" %><br>
+  <p class='error'><%= puts @product.name %></p>
+    </div>
+  <div class="row mb-2">
+  <%= form.text_field :description, placeholder: "Description", class: "inner-body" %><br>
+<p class='error'><%= show_errors(@product, :description) %></p>
+    </div>
+  <div class="row mb-2">
+  <%= form.text_field :price, placeholder: "Price", class: "inner-body"%><br>
+<p class='error'><%= show_errors(@product, :price) %></p>
+
+    </div>
+      <div class="row mb-2">
+  <%= form.text_field :image_url, placeholder: "Image", class: "inner-body"%><br>
+<p class='error'><%= show_errors(@product, :image_url) %></p>
+    </div>
+    <br/>
+  <div class="row mb-2">
+  <%= form.submit 'Create Product', class:"form-btn", data: {:disable_with => 'Creating'}%>
+    </div>
+<% end %>
+</div>

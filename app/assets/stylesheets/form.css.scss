@@ -1,0 +1,31 @@
+$primary-color: mediumaquamarine;
+$primary-hover: rgb(104, 210, 175);
+$secondary-color: salmon;
+$secondary-hover: rgb(255, 104, 87);
+$bg-color: #0d1117;
+
+.inner-body {
+  background-color: rgba(188, 188, 188, 0.368);
+  border-radius: 50rem;
+  border-width: 0rem;
+  color: white;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.form-btn {
+  background-color: $primary-color;
+  color: white;
+  border-radius: 50rem;
+  border-width: 0rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+.error {
+  color: $secondary-color;
+}
