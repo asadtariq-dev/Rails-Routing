@@ -3,7 +3,7 @@
 <%# link_to "Delete", root_path, method: :destroy, data: { turbo_method: :delete,
     turbo_confirm: "Are you sure?" } %>
 <h2><strong><%= product.name%></strong> </h2>
-<p><%= analyze_price(product) %></p>
+<p><%= number_to_currency(product.price, :unit => "Rs ", :delimeter=>",", :precision => 0) %></p>
 <p>Added: <%= time_ago_in_words(product.created_at) %> ago</p>
 
 <p><%= link_to 'Details', product %></p>
