@@ -5,52 +5,52 @@
       <%= form.text_field :name, placeholder: "Name", size:'45rem', class: "inner-body mw-4" %><br>
     </div>
 
-    <% if @product.errors.any? %>
       <p class="error">
+    <% if @product.errors.any? %>
         <% show_errors(@product, 'name').each do |error| %>
           Name <%= error %><br>
         <% end %>
-      </p>
     <%end%>
+      </p>
 
 
     <div class="row mb-2">
       <%= form.text_field :description, placeholder: "Description", size:'45rem', class: "inner-body" %><br>
     </div>
 
-    <% if @product.errors.any? %>
       <p class="error">
+    <% if @product.errors.any? %>
         <% show_errors(@product, 'description').each do |error| %>
           Description <%= error %><br>
         <% end %>
-      </p>
     <%end%>
+      </p>
 
 
     <div class="row mb-2">
       <%= form.text_field :price, placeholder: "Price", size:'45rem', class: "inner-body"%><br>
     </div>
 
-    <% if @product.errors.any? %>
       <p class="error">
+    <% if @product.errors.any? %>
         <% show_errors(@product, 'price').each do |error| %>
           Price <%= error %><br>
         <% end %>
-      </p>
     <%end%>
+      </p>
 
 
     <div class="row mb-2">
       <%= form.text_field :image_url, placeholder: "Image", size:'45rem', class: "inner-body"%><br>
     </div>
 
-    <% if @product.errors.any? %>
       <p class="error">
+    <% if @product.errors.any? %>
         <% show_errors(@product, 'image_url').each do |error| %>
           Image <%= error %><br>
         <% end %>
-      </p>
     <%end%>
+      </p>
 
 
     <br/>
