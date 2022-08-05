@@ -1,28 +1,63 @@
 <h2>Add New Product Here</h2>
 <br/>
-
 <div class="d-flex justify-content-center">
-<%= form_with model: @product do |form| %>
-<div class="row mb-2">
-  <%= form.text_field :name, placeholder: "Name", size:'40', class: "inner-body" %><br>
-  <p class='error'><%= puts @product.name %></p>
-    </div>
-  <div class="row mb-2">
-  <%= form.text_field :description, placeholder: "Description", class: "inner-body" %><br>
-<p class='error'><%= show_errors(@product, :description) %></p>
-    </div>
-  <div class="row mb-2">
-  <%= form.text_field :price, placeholder: "Price", class: "inner-body"%><br>
-<p class='error'><%= show_errors(@product, :price) %></p>
+  <%= form_with(model: @product) do |form| %>
 
+    <div class="row mb-2">
+      <%= form.text_field :name, placeholder: "Name", size:'40', class: "inner-body mw-4" %><br>
     </div>
-      <div class="row mb-2">
-  <%= form.text_field :image_url, placeholder: "Image", class: "inner-body"%><br>
-<p class='error'><%= show_errors(@product, :image_url) %></p>
+
+    <% if @product.errors.any? %>
+      <p class="error">
+        <% show_errors(@product, 'name').each do |error| %>
+          Name <%= error %><br>
+        <% end %>
+      </p>
+    <%end%>
+
+
+    <div class="row mb-2">
+      <%= form.text_field :description, placeholder: "Description", class: "inner-body" %><br>
     </div>
+
+    <% if @product.errors.any? %>
+      <p class="error">
+        <% show_errors(@product, 'description').each do |error| %>
+          Description <%= error %><br>
+        <% end %>
+      </p>
+    <%end%>
+
+
+    <div class="row mb-2">
+      <%= form.text_field :price, placeholder: "Price", class: "inner-body"%><br>
+    </div>
+
+    <% if @product.errors.any? %>
+      <p class="error">
+        <% show_errors(@product, 'price').each do |error| %>
+          Price <%= error %><br>
+        <% end %>
+      </p>
+    <%end%>
+
+
+    <div class="row mb-2">
+      <%= form.text_field :image_url, placeholder: "Image", class: "inner-body"%><br>
+    </div>
+
+    <% if @product.errors.any? %>
+      <p class="error">
+        <% show_errors(@product, 'image_url').each do |error| %>
+          Image <%= error %><br>
+        <% end %>
+      </p>
+    <%end%>
+
+
     <br/>
-  <div class="row mb-2">
-  <%= form.submit 'Create Product', class:"form-btn", data: {:disable_with => 'Creating'}%>
+    <div class="row mb-2">
+      <%= form.submit 'Create Product', class:"form-btn", data: {:disable_with => 'Creating'}%>
     </div>
-<% end %>
+  <% end %>
 </div>
