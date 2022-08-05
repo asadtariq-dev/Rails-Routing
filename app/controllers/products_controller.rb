@@ -15,10 +15,15 @@ class ProductsController < ApplicationController
   # Creates a product with handling the success and error condition
   def create
     @product = Product.new(product_params)
-    if @product.save
-      redirect_to new_product_path, status: :see_other, notice: "#{@product.name} was successfully added."
-    else
-      redirect_to new_product_path, alert: 'Invalid Input'
+
+    respond_to do |format|
+      if @product.save
+        format.html { redirect_to product_url(@product), notice: "#{@product.name} was successfully added." }
+        format.json { render :show, status: :created, location: @product }
+      else
+        format.html { render :new, status: :unprocessable_entity, alert: 'Invalid Input' }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+      end
     end
   end
 
