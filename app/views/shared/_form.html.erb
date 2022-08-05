@@ -1,8 +1,8 @@
-<div class="d-flex justify-content-center">
+<div class="form-container d-flex justify-content-center w-60 mx-auto flex-column ">
   <%= form_with(model: @product) do |form| %>
 
     <div class="row mb-2">
-      <%= form.text_field :name, placeholder: "Name", size:'40', class: "inner-body mw-4" %><br>
+      <%= form.text_field :name, placeholder: "Name", size:'45rem', class: "inner-body mw-4" %><br>
     </div>
 
     <% if @product.errors.any? %>
@@ -15,7 +15,7 @@
 
 
     <div class="row mb-2">
-      <%= form.text_field :description, placeholder: "Description", class: "inner-body" %><br>
+      <%= form.text_field :description, placeholder: "Description", size:'45rem', class: "inner-body" %><br>
     </div>
 
     <% if @product.errors.any? %>
@@ -28,7 +28,7 @@
 
 
     <div class="row mb-2">
-      <%= form.text_field :price, placeholder: "Price", class: "inner-body"%><br>
+      <%= form.text_field :price, placeholder: "Price", size:'45rem', class: "inner-body"%><br>
     </div>
 
     <% if @product.errors.any? %>
@@ -41,7 +41,7 @@
 
 
     <div class="row mb-2">
-      <%= form.text_field :image_url, placeholder: "Image", class: "inner-body"%><br>
+      <%= form.text_field :image_url, placeholder: "Image", size:'45rem', class: "inner-body"%><br>
     </div>
 
     <% if @product.errors.any? %>

@@ -4,11 +4,15 @@ $secondary-color: salmon;
 $secondary-hover: rgb(255, 104, 87);
 $bg-color: #0d1117;
 
+.form-container {
+  max-width: 30rem;
+}
 .inner-body {
   background-color: rgba(188, 188, 188, 0.368);
-  border-radius: 50rem;
-  border-width: 0rem;
+  border-radius: 0.3rem;
+  border-width: 0.1rem;
   color: white;
+  padding-inline: 1rem;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
 }
@@ -16,11 +20,10 @@ $bg-color: #0d1117;
 .form-btn {
   background-color: $primary-color;
   color: white;
-  border-radius: 50rem;
+  border-radius: 0.3rem;
   border-width: 0rem;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
-
   &:hover {
     background-color: $primary-hover;
   }
@@ -28,4 +31,5 @@ $bg-color: #0d1117;
 
 .error {
   color: $secondary-color;
+  font-size: medium;
 }
