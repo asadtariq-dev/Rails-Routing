@@ -12,28 +12,23 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
-  # Creates an product with handling the success and error condition
+  # Creates a product with handling the success and error condition
   def create
     @product = Product.new(product_params)
     if @product.save
-      flash[:success] = 'Product successfully created'
-      redirect_to @product
+      redirect_to new_product_path, status: :see_other, notice: "#{@product.name} was successfully added."
     else
-      flash[:error] = 'Something went wrong'
-      render 'new'
+      redirect_to new_product_path, alert: 'Invalid Input'
     end
   end
 
   # Action for deleting product
   def destroy
-    puts "=\n=\n=\n=\n="
-    puts @product
-    puts "=\n=\n=\n=\n="
     @product = Product.find(params[:id])
     if @product.destroy
-      redirect_to root_path, status: :see_other, alert: "Item was successfully deleted."
+      redirect_to root_path, status: :see_other, alert: 'Item was successfully deleted.'
     else
-      redirect_to @products, alert: "Something went wrong"
+      redirect_to @products, alert: 'Something went wrong'
     end
   end
 
@@ -41,6 +36,6 @@ class ProductsController < ApplicationController
 
   # Filters params using Strong Parameters
   def product_params
-    params.require(:products).permit(:name, :description, :image_url, :price)
+    params.require(:product).permit(:name, :description, :image_url, :price)
   end
 end
