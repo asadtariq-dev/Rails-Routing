@@ -16,6 +16,10 @@
   }
 }
 
+.paginator-container {
+  max-width: 55rem;
+}
+
 .pagination {
   .first {
     padding: 0;
@@ -52,11 +56,10 @@
   }
 
   .page-link {
-    z-index: 3;
+    z-index: 1;
     color: #fbfbfb;
     border-color: transparent !important;
     border-radius: 45%;
-    margin-left: 5px !important;
   }
 
 }

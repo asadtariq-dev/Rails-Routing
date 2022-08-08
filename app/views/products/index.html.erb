@@ -1,8 +1,8 @@
 <div class="pt-5">
 <% if @products.count > 0 %>
-<%= paginate @products%>
-<br>
   <%= render partial: '/shared/product/products-list' %>
+<br>
+<%= paginate @products, :window => 1%>
 <% else %>
    <%= render partial: '/shared/product/empty-store' %>
 <%end%>
