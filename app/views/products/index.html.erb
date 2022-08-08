@@ -1,7 +1,7 @@
 <div class="pt-5">
 <% if @products.count > 0 %>
-  <%= render partial: '/shared/item' %>
+  <%= render partial: '/shared/product/products-list' %>
 <% else %>
-   <%= render partial: '/shared/empty-store' %>
+   <%= render partial: '/shared/product/empty-store' %>
 <%end%>
 </div>
