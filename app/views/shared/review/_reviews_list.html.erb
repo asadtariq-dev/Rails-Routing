@@ -1,8 +1,10 @@
-<% @reviews.each do |review| %>
+<% cache(@reviews) do%>
+  <% @reviews.each do |review| %>
   <div class="product-item border rounded p-3">
     <h3><strong><%= review.customer_name%></strong></h3>
     <h4><%= review.content%></h4>
     <p><%= time_ago_in_words(review.created_at) %> ago</p>
   </div>
   <br/>
+  <% end %>
 <% end %>
