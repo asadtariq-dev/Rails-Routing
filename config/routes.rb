@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'reviews/index'
   root to: 'products#index'
+  get 'reviews/index'
   resources :products
 
   # get 'products', to: 'products#index', as: 'products'

@@ -1,11 +1,9 @@
-<% cache(@products) do%>
-  <% @products.each do |product| %>
-    <div class="product-item border rounded p-3">
-      <h2><strong><%= product.name%></strong> </h2>
-      <p><%= number_to_currency(product.price, :unit => "Rs ", :delimeter=>",", :precision => 0) %></p>
-      <p>Added: <%= time_ago_in_words(product.created_at) %> ago</p>
-      <p><%= link_to 'Details', product %></p>
-    </div>
-    <br/>
-  <% end %>
+<% @products.each do |product| %>
+  <div class="product-item border rounded p-3">
+    <h2><strong><%= product.name%></strong> </h2>
+    <p><%= number_to_currency(product.price, :unit => "Rs ", :delimeter=>",", :precision => 0) %></p>
+    <p>Added: <%= time_ago_in_words(product.created_at) %> ago</p>
+    <p><%= link_to 'Details', product %></p>
+  </div>
+  <br/>
 <% end %>
